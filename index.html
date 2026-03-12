@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SAKURA</title>
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="header-content">
+          <div class="logo">SAKU<span>RA</span></div>
+          <nav class="navigation">
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#orign">Orign</a></li>
+              <li><a href="#benefits">Benefits</a></li>
+              <li><a href="#shop">Shop</a></li>
+              <li><a href="#Contact">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <main>
+        <section class="hero">
+            <div class="hero-container">
+
+                <div class="hero-content">
+                    <h1 id="hero-heading">The <span>Sakura</span> Season</h1>
+                    <p class="hero-para"">
+                        Hand-picked colourfull Sakura flowers deliverd straight to your doorstep.
+                    </p>
+                    
+                    <div class="order_btn">
+                        <a href="#Order"><button id="order-btn">ORDER NOW</button></a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img id="myimages" src="./images/white.jpg" alt="white"/>
+                    <a href="#change"><button id="change-img">Change Image</button></a>
+                </div>
+            </div>
+        </section>
+      </main>
+    </div>
+    <script>
+
+      // pehle images ko array ke ander dala and fir img and btn ko variable mein liya fir btn pe event lagaya jisme math.floor(math.random) ka use kiya jisko images ke array ke sath connect kiya images.length se
+     const images  = [
+ "./images/sunflower.jpg",
+ "./images/yellow.jpg",
+ "./images/yellowwhite.jpg",
+ "./images/white.jpg",
+ "./images/redlily.jpg"
+]
+      let myimage = document.querySelector('#myimages');
+      let change_btn = document.querySelector("#change-img");
+
+      change_btn.addEventListener('click',function(){
+        const randomindex = Math.floor(Math.random() * images.length);
+        myimage.src = images[randomindex];
+      })
+
+
+
+    </script>
+  </body>
+</html>
